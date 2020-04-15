@@ -1,4 +1,12 @@
-import { AlphaMode, ComponentType, DataType, MeshMode, WrappingMode, BufferOutputType, ImageOutputType } from "./types";
+import {
+  AlphaMode,
+  ComponentType,
+  DataType,
+  MeshMode,
+  WrappingMode,
+  BufferOutputType,
+  ImageOutputType
+} from "./types";
 import { Buffer } from "./buffer";
 
 export interface glTF {
@@ -24,9 +32,9 @@ export interface glTF {
   /** Extras used specifically by gltf-js-utils. */
   extras: {
     options: {
-       bufferOutputType?: BufferOutputType;
-       imageOutputType?: ImageOutputType;
-    },
+      bufferOutputType?: BufferOutputType;
+      imageOutputType?: ImageOutputType;
+    };
     binChunkBuffer: Buffer | null;
     promises: Promise<any>[];
   };
@@ -58,7 +66,24 @@ export interface glTFNode {
   rotation?: [number, number, number, number];
   scale?: [number, number, number];
   translation?: [number, number, number];
-  matrix?: [number, number, number, number, number, number, number, number, number, number, number, number, number, number, number, number];
+  matrix?: [
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number,
+    number
+  ];
   weights?: number;
 }
 
@@ -99,12 +124,13 @@ export interface glTFMeshPrimitiveAttributes {
 }
 
 export type glTFAttribute =
-  "POSITION"
+  | "POSITION"
   | "NORMAL"
   | "TANGENT"
   | "TEXCOORD_0"
   | "TEXCOORD_1"
-  | "COLOR_0";
+  | "COLOR_0"
+  | "_BATCHID";
 
 export interface glTFTexture {
   name?: string;

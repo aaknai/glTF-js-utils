@@ -30,14 +30,23 @@ export class Node {
   }
 
   public setRotationDegrees(x: number, y: number, z: number): void {
-    this.setRotationRadians(degreesToRadians(x), degreesToRadians(y), degreesToRadians(z));
+    this.setRotationRadians(
+      degreesToRadians(x),
+      degreesToRadians(y),
+      degreesToRadians(z)
+    );
   }
 
   public setRotationRadians(x: number, y: number, z: number): void {
-    this._rotation = toQuaternion(x, y ,z);
+    this._rotation = toQuaternion(x, y, z);
   }
 
-  public setRotationQuaternion(x: number, y: number, z: number, w: number): void {
+  public setRotationQuaternion(
+    x: number,
+    y: number,
+    z: number,
+    w: number
+  ): void {
     this._rotation = new Quaternion(x, y, z, w);
   }
 

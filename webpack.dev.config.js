@@ -16,10 +16,9 @@ module.exports = {
     extensions: [".ts", ".js"]
   },
   output: {
-    libraryTarget: "umd",
+    libraryTarget: "commonjs2",
     library: "GLTFUtils",
     filename: "gltfutils.js",
     path: path.resolve(__dirname, "dist")
   }
 };
-
